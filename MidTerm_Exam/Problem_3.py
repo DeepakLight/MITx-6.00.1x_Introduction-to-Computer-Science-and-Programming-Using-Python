@@ -12,13 +12,8 @@ def keysWithValue(aDict, target):
     target: an integer
     '''
     # Your code here 
-    for i in aDict:
-        if aDict[i] == target:
-            
-            result_list.append(i)
-        result_list.sort()    
-            
-    return result_list    	
+    result_list = [k for k,v in aDict.items() if v == target]
+    return sorted(result_list)
 
 aDict = {5 : 1, 3: 90, 4: 90, 12: 90, 22: 90, 21: 100}
 print(keysWithValue(aDict, 90))
